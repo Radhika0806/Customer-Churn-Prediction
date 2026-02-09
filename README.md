@@ -109,6 +109,27 @@ This solution can be applied to:
 * Model Evaluation Metrics
 
 ---
+## How to Run
+
+### 1. Clone the repository
+git clone https://github.com/your-username/customer-churn-prediction.git
+cd customer-churn-prediction
+
+### 2. (Optional) Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+### 3. Install required dependencies
+pip install -r requirements.txt
+
+### 4. Launch the Jupyter Notebook
+jupyter notebook
+
+### 5. Open and run the notebook
+# Open: customer_churn_prediction.ipynb
+# Run all cells sequentially to reproduce EDA, preprocessing, and model results
+
+---
 
 ## 🔮 Future Improvements
 
