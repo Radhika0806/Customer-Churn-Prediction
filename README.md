@@ -126,8 +126,8 @@ pip install -r requirements.txt
 jupyter notebook
 
 ### 5. Open and run the notebook
-# Open: customer_churn_prediction.ipynb
-# Run all cells sequentially to reproduce EDA, preprocessing, and model results
+### Open: customer_churn_prediction.ipynb
+### Run all cells sequentially to reproduce EDA, preprocessing, and model results
 
 ---
 
