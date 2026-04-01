@@ -108,6 +108,14 @@ Customer Churn Banking/
 └── churn_model.pkl                        # Trained model (auto-generated)
 ```
 
+## Screenshots
+
+| Input Form | Prediction Result |
+|-----------|-------------------|
+| ![Input](screenshots/input.png) | ![Prediction](screenshots/prediction.png) |
+
+> **To add screenshots:** Run `streamlit run app.py`, fill in customer details, and save screenshots of the form and prediction in the `screenshots/` folder.
+
 ## Key Features of the App
 
 - **st.cache_resource:** Efficient model caching to avoid retraining
