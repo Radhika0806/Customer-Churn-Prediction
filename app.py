@@ -152,15 +152,19 @@ def main():
         explainer = shap.TreeExplainer(clf)
         shap_values = explainer.shap_values(X_transformed)
 
-        # shap_values is [array_class0, array_class1] for binary classification
-        # Use class-1 (churn) SHAP values
-        sv_churn = shap_values[1][0]  # single sample, churn class
+        # Handle both old SHAP (list) and new SHAP (3D array)
+        if isinstance(shap_values, list):
+            sv_churn = shap_values[1][0]
+            base_val = explainer.expected_value[1]
+        else:
+            sv_churn = shap_values[0, :, 1]
+            base_val = explainer.expected_value[1] if hasattr(explainer.expected_value, '__len__') else explainer.expected_value
 
         # --- Waterfall plot for individual prediction ---
         st.subheader("SHAP Waterfall Plot")
         explanation = shap.Explanation(
             values=sv_churn,
-            base_values=explainer.expected_value[1],
+            base_values=base_val,
             data=X_transformed[0]
             if hasattr(X_transformed, "__getitem__")
             else X_transformed.toarray()[0],
