@@ -6,4 +6,3 @@ imbalanced-learn
 matplotlib
 seaborn
 shap
-ydata-profiling
